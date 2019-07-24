@@ -10,6 +10,8 @@
     ##example
 
     ./pbackup.sh file.sh /home/master
+    file.sh is a file
+    it will be backed up at /home/master/(a directory named with current date format)
     backup ok
 
     file.sh will be transferred to /home/master and it will be stored in a directory which will
