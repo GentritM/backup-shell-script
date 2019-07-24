@@ -11,11 +11,11 @@ fi
 target=$1
 #checking whether the target is a dir or a file only 
 if [ -f $target ]; then 
-    echo "target $target is a file it will be moved to $destination"
+    echo "target $target is a file "
 else
     
     if [ -d $target ]; then 
-        echo "target $target is a directory it will be backed up to $destination"    
+        echo "target $target is a directory "    
     else 
         echo "target is not valid, please enter a dir or a file"
         exit 2 
@@ -29,9 +29,10 @@ fi
 
 date=$(date +%Y-%m-%d_%H_%M)
 mkdir -p $destination/$date 
-cp $target $destination/$date
+cp -r $target $destination/$date
 
-if [ $? -eq 0 ]; then 
+if [ $? -eq 0 ]; then
+    echo "it will be backed up to $destination/$date" 
     echo backup ok 
 else 
     echo backup failed 
