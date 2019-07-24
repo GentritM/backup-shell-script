@@ -12,5 +12,6 @@
     ./pbackup.sh file.sh /home/master
     backup ok
 
-    file.sh will be transferred to /home/master and it will be stored in a directory which will contain the name of the date that the backup was made example (2019-07-21)
+    file.sh will be transferred to /home/master and it will be stored in a directory which will
+    contain the name of the date that the backup was made example (2019-07-21)
 
